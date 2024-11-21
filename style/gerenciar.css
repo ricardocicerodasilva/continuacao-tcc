@@ -1,0 +1,109 @@
+/* Estilo para o container */
+.container {
+  display: flex;              /* Usa flexbox para organizar menu e conteúdo lado a lado */
+  flex-direction: row;        /* Organiza o menu à esquerda e conteúdo à direita */
+  gap: 10px;                  /* Espaço entre o menu e o conteúdo */
+  width: 100%;                /* Garante que o contêiner ocupe toda a largura da tela */
+  margin: 0;                  /* Remove margens extras ao redor do contêiner */
+  padding: 0;                 /* Remove qualquer preenchimento que possa ter sido aplicado */
+}
+
+/* Estilo para o Menu */
+.menu {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;     /* Organiza os itens do menu em uma coluna */
+  gap: 50px;                  /* Espaçamento entre os botões */
+  width: 100px;               /* Largura do menu */
+  padding: 0;
+  
+}
+
+.menu .btn {
+  padding: 10px;
+  background-color: #ccc;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.menu .btn:hover {
+  background-color: #ddd;     /* Cor ao passar o mouse */
+}
+
+/* Estilo para o conteúdo */
+.content {
+  flex: 1;                    /* Faz a área de conteúdo ocupar o restante da largura */
+  padding: 20px;
+/*  background-color: #fff;*/
+}
+
+/* Estilo para as caixas (dados) */
+.dados {
+  display: none;              /* Inicialmente, os dados estão escondidos */
+}
+
+.dados.active {
+  display: block;             /* Exibe o conteúdo quando a classe 'active' for adicionada */
+}
+
+.dados h2 {
+  margin-top: 0;
+}
+
+.dados p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dados a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.dados a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para as caixas originais de acervo */
+/* Estilo para as caixas originais de acervo */
+.caixa {
+  position: relative;         /* Permite que as caixas sigam o fluxo natural da página */
+  width: 100px;               /* Largura da caixa */
+  height: 100px;              /* Altura da caixa */
+  display: flex;
+  flex-direction: column;     /* Organiza o conteúdo dentro da caixa em uma coluna */
+  justify-content: flex-end;  /* Alinha o conteúdo dentro da caixa para a parte inferior */
+  text-align: center;         /* Alinha o texto dentro da caixa ao centro */
+  overflow: hidden;           /* Garante que o conteúdo não ultrapasse os limites da caixa */
+  border-radius: 5%;          /* Bordas arredondadas */
+  margin: 20px auto;          /* Espaçamento entre as caixas e centraliza no contêiner */
+  z-index: 1;                 /* Camada padrão */
+}
+
+/* Ajustando links dentro das caixas */
+.caixa a {
+  position: absolute;         /* Link ocupa toda a área da caixa */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.caixa p {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);  /* Fundo semitransparente para o texto */
+  color: white;
+  padding: 5px;
+}
+
+.caixa:hover {
+  background-color: #f4f4f4;
+}
